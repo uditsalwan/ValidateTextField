@@ -7,14 +7,30 @@
 //
 
 import UIKit
+import ValidateTextField
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textField: ValidateTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        view.backgroundColor = .green
+        textField.text = "Sample"
+        textField.style = .dark
+        textField.errorMessage = "Sample error message"
+        setBackgroundTapped()
     }
 
+    func setBackgroundTapped() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+        view.isUserInteractionEnabled = true
+    }
 
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
 }
 

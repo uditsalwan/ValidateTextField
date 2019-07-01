@@ -15,10 +15,19 @@
 		A528FCDB22C5F3C100E01A21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A528FCD922C5F3C100E01A21 /* Main.storyboard */; };
 		A528FCDD22C5F3C500E01A21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A528FCDC22C5F3C500E01A21 /* Assets.xcassets */; };
 		A528FCE022C5F3C500E01A21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A528FCDE22C5F3C500E01A21 /* LaunchScreen.storyboard */; };
+		A528FCE722C6164A00E01A21 /* ValidateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528FCE622C6164A00E01A21 /* ValidateTextField.swift */; };
+		A528FCE922C616C400E01A21 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A528FCE822C616C400E01A21 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		A528FCC022C5F34E00E01A21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A528FCAC22C5F34E00E01A21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A528FCB422C5F34E00E01A21;
+			remoteInfo = ValidateTextField;
+		};
+		A528FCEA22C61C8600E01A21 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A528FCAC22C5F34E00E01A21 /* Project object */;
 			proxyType = 1;
@@ -41,6 +50,8 @@
 		A528FCDC22C5F3C500E01A21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A528FCDF22C5F3C500E01A21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A528FCE122C5F3C500E01A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A528FCE622C6164A00E01A21 /* ValidateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateTextField.swift; sourceTree = "<group>"; };
+		A528FCE822C616C400E01A21 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +103,7 @@
 		A528FCB722C5F34E00E01A21 /* ValidateTextField */ = {
 			isa = PBXGroup;
 			children = (
+				A528FCE522C6161C00E01A21 /* TextField */,
 				A528FCB822C5F34E00E01A21 /* ValidateTextField.h */,
 				A528FCB922C5F34E00E01A21 /* Info.plist */,
 			);
@@ -118,6 +130,15 @@
 				A528FCE122C5F3C500E01A21 /* Info.plist */,
 			);
 			path = ValidateTextFieldExample;
+			sourceTree = "<group>";
+		};
+		A528FCE522C6161C00E01A21 /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				A528FCE622C6164A00E01A21 /* ValidateTextField.swift */,
+				A528FCE822C616C400E01A21 /* Constants.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +202,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A528FCEB22C61C8600E01A21 /* PBXTargetDependency */,
 			);
 			name = ValidateTextFieldExample;
 			productName = ValidateTextFieldExample;
@@ -199,6 +221,7 @@
 				TargetAttributes = {
 					A528FCB422C5F34E00E01A21 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					A528FCBD22C5F34E00E01A21 = {
 						CreatedOnToolsVersion = 10.1;
@@ -260,6 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A528FCE722C6164A00E01A21 /* ValidateTextField.swift in Sources */,
+				A528FCE922C616C400E01A21 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +312,11 @@
 			isa = PBXTargetDependency;
 			target = A528FCB422C5F34E00E01A21 /* ValidateTextField */;
 			targetProxy = A528FCC022C5F34E00E01A21 /* PBXContainerItemProxy */;
+		};
+		A528FCEB22C61C8600E01A21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A528FCB422C5F34E00E01A21 /* ValidateTextField */;
+			targetProxy = A528FCEA22C61C8600E01A21 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -435,6 +465,7 @@
 		A528FCCA22C5F34E00E01A21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -451,6 +482,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.udemo.ValidateTextField;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -459,6 +491,7 @@
 		A528FCCB22C5F34E00E01A21 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -483,6 +516,7 @@
 		A528FCCD22C5F34E00E01A21 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ValidateTextFieldTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -500,6 +534,7 @@
 		A528FCCE22C5F34E00E01A21 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ValidateTextFieldTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
